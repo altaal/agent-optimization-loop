@@ -27,15 +27,15 @@ Individual prompt and description effects cannot be separated in this design.
 
 ## Week 7: 2. Difference from the previous week
 
-| Aspect | Previous exercise | This exercise |
-| --- | --- | --- |
-| Question | Transfer after preference training | Transfer after instruction search |
-| Changed object | A model adapter | Text instructions |
-| Reused code | Bounded repair protocol | Pinned ACI loop and original tasks |
-| Model | A local coding model | Proposed hosted Qwen model |
-| Feedback | Preferred and rejected edits | Development traces and gate results |
-| Budget | Training and evaluation | Bounded candidate proposals and paired attempts |
-| Outputs | Adapter and repair results | Instruction patches and one event ledger |
+| Aspect         | Previous exercise                  | This exercise                                   |
+| -------------- | ---------------------------------- | ----------------------------------------------- |
+| Question       | Transfer after preference training | Transfer after instruction search               |
+| Changed object | A model adapter                    | Text instructions                               |
+| Reused code    | Bounded repair protocol            | Pinned ACI loop and original tasks              |
+| Model          | A local coding model               | Proposed hosted Qwen model                      |
+| Feedback       | Preferred and rejected edits       | Development traces and gate results             |
+| Budget         | Training and evaluation            | Bounded candidate proposals and paired attempts |
+| Outputs        | Adapter and repair results         | Instruction patches and one event ledger        |
 
 This is a new mechanism. Scores from different weeks are not a controlled comparison.
 The previous series plan contains proposals, not evidence that its revised runs occurred.
@@ -56,14 +56,14 @@ They do not establish freedom from model training contamination.
 
 ## Week 8: 2. Difference from the previous week
 
-| Aspect | Week 7 | Week 8 |
-| --- | --- | --- |
-| Work | Propose and accept edits | Measure a frozen candidate |
-| Inputs | Development cases only | Development and reserved cases |
-| Model and tools | Proposed fixed settings | The same approved settings |
-| Instruction edits | Up to three proposals per group | None |
-| Attempts | Discovery and three gates | Both conditions on each case |
-| Output | Candidate and ledger | Per-case table and uncertainty interval |
+| Aspect            | Week 7                          | Week 8                                  |
+| ----------------- | ------------------------------- | --------------------------------------- |
+| Work              | Propose and accept edits        | Measure a frozen candidate              |
+| Inputs            | Development cases only          | Development and reserved cases          |
+| Model and tools   | Proposed fixed settings         | The same approved settings              |
+| Instruction edits | Up to three proposals per group | None                                    |
+| Attempts          | Discovery and three gates       | Both conditions on each case            |
+| Output            | Candidate and ledger            | Per-case table and uncertainty interval |
 
 Week 8 changes the measurement scope. It introduces no second optimizer.
 
@@ -74,14 +74,14 @@ Use [five development cases](data/development.json) and
 Each task has its own family label. Any new related variants must share that label.
 Semantic similarity can remain across different tasks in this small set.
 
-| Step | Declared calculation | Maximum target attempts |
-| --- | --- | --- |
-| Pilot discovery | 5 cases × 3 repeats | 15 |
-| Pilot candidate gates | 5 cases × 2 conditions × 3 repeats | 30 |
-| Full discovery | 5 cases × 3 repeats | 15 |
-| Full search | 2 groups × 3 proposals × 5 cases × 2 conditions × 3 repeats | 180 |
-| Final development | 5 cases × 2 conditions × 3 repeats | 30 |
-| Final held out | 10 cases × 2 conditions × 3 repeats | 60 |
+| Step                  | Declared calculation                                        | Maximum target attempts |
+| --------------------- | ----------------------------------------------------------- | ----------------------- |
+| Pilot discovery       | 5 cases × 3 repeats                                         | 15                      |
+| Pilot candidate gates | 5 cases × 2 conditions × 3 repeats                          | 30                      |
+| Full discovery        | 5 cases × 3 repeats                                         | 15                      |
+| Full search           | 2 groups × 3 proposals × 5 cases × 2 conditions × 3 repeats | 180                     |
+| Final development     | 5 cases × 2 conditions × 3 repeats                          | 30                      |
+| Final held out        | 10 cases × 2 conditions × 3 repeats                         | 60                      |
 
 The pilot uses at most one optimizer call and 45 target attempts.
 The full run uses at most six optimizer calls and 285 target attempts.
@@ -130,7 +130,8 @@ The optimizer gets at most 12,000 input tokens and 2,000 output tokens.
 Stop on oversized input. Do not silently remove evidence to fit the limit.
 
 Before the full run, commit task hashes, splits, instructions, and decoder settings.
-Also commit the model identifier, provider route, code hashes, attempt matrix, budgets, and analysis.
+Also commit the model identifier, provider route, code hashes, attempt matrix, budgets, and
+analysis.
 Record the provider's returned model and usage on every call.
 Provider support for a seed does not guarantee identical random choices across arms.
 The public endpoint has no immutable model-weight revision. Record this limit.
@@ -153,7 +154,8 @@ The live wrapper, retry ledger, and sensitivity analysis remain pending.
 ## Cost estimate
 
 The [saved public rates](data/pricing.json) came from the
-[OpenRouter model catalog](https://openrouter.ai/api/v1/models) on October 2, 2026.
+[OpenRouter model catalog](https://openrouter.ai/api/v1/models).
+The snapshot date is October 2, 2026.
 They quote $0.10 per million input tokens and $1.10 per million output tokens.
 Cached-input discounts are excluded from the estimate.
 
@@ -163,9 +165,9 @@ It also counts two possible transport retries for every call.
 These assumptions guide the budget. No live usage was measured.
 
 | Paid step | Typical assumption | Conservative estimate | Proposed spend cap |
-| --- | --- | --- | --- |
-| Pilot | $0.1564 | $5.1132 | $6 |
-| Full run | $0.9894 | $32.3802 | $35 |
+| --------- | ------------------ | --------------------- | ------------------ |
+| Pilot     | $0.1564            | $5.1132               | $6                 |
+| Full run  | $0.9894            | $32.3802              | $35                |
 
 [The cost script](scripts/estimate_cost.py) calculates every value.
 The estimate excludes taxes and future price changes.
@@ -174,13 +176,13 @@ Approval of a pilot does not approve the full run or publication.
 
 ## Public grounding
 
-| Choice | Public source | Application here |
-| --- | --- | --- |
-| Edit instructions from execution evidence | [GEPA §3.2](https://arxiv.org/pdf/2507.19457v1) | Change only text |
-| Keep test feedback outside search | [GEPA §4](https://arxiv.org/pdf/2507.19457v1) | Separate final evaluator |
-| Diagnose, patch, compare, retain outcomes | [AutoSaddler §4](https://arxiv.org/html/2608.23041v1#S4) | Small serial search with an event ledger |
-| Repeat runs and report reserved cases | [AutoSaddler §3](https://arxiv.org/html/2608.23041v1#S3) | Repeated paired attempts |
-| Protect evaluation and records | [Harness tampering, taxonomy](https://arxiv.org/html/2609.00069v1) | Text-only update boundary |
+| Choice                                    | Public source                                                      | Application here                         |
+| ----------------------------------------- | ------------------------------------------------------------------ | ---------------------------------------- |
+| Edit instructions from execution evidence | [GEPA §3.2](https://arxiv.org/pdf/2507.19457v1)                    | Change only text                         |
+| Keep test feedback outside search         | [GEPA §4](https://arxiv.org/pdf/2507.19457v1)                      | Separate final evaluator                 |
+| Diagnose, patch, compare, retain outcomes | [AutoSaddler §4](https://arxiv.org/html/2608.23041v1#S4)           | Small serial search with an event ledger |
+| Repeat runs and report reserved cases     | [AutoSaddler §3](https://arxiv.org/html/2608.23041v1#S3)           | Repeated paired attempts                 |
+| Protect evaluation and records            | [Harness tampering, taxonomy](https://arxiv.org/html/2609.00069v1) | Text-only update boundary                |
 
 These papers supplied design ideas, not copied implementations or expected scores.
 The three-stage gates, exact sample sizes, thresholds, and cost caps are project choices.
@@ -192,3 +194,12 @@ This project does not implement evolutionary archives or optimize its own optimi
 Unless the pilot exposes a ceiling, use the default question and pinned target.
 Start with the $6 pilot cap after approval and completion of its live-call wrapper.
 Keep publication separate until the live evidence and lesson are ready.
+
+## Documentation and publication update
+
+On October 2, 2026, the project owner requested complete technical documentation and GitHub
+publication.
+This request replaces the earlier publication hold for the offline checkpoint.
+The earlier plan remains above as the decision record.
+Paid model execution remains outside this publication task.
+The complete reference is [TECHNICAL_OVERVIEW.md](TECHNICAL_OVERVIEW.md).

@@ -41,7 +41,7 @@ The report command rebuilds tables from saved attempts. It makes no model calls.
 
 It groups observed development failures, asks for a text edit, and checks the edit.
 A gate is a check that an edit must pass before the loop accepts it.
-Each gate compares the original and edited instructions with repeated attempts.
+Each gate compares the current accepted and proposed instructions with repeated attempts.
 
 ```text
 development attempts -> observed failure groups -> proposed text edit
@@ -59,19 +59,22 @@ The final evaluator receives no optimizer object and sends it no results.
 
 The [scripted report](results/offline-verified/report.json) shows:
 
-| Split | Before | After | Paired difference |
-| --- | --- | --- | --- |
-| Development | 9 passes / 15 attempts | 15 passes / 15 attempts | +0.40 |
-| Held out | 20 passes / 30 attempts | 20 passes / 30 attempts | 0.00 |
+| Split       | Before                  | After                   | Paired difference |
+| ----------- | ----------------------- | ----------------------- | ----------------- |
+| Development | 9 passes / 15 attempts  | 15 passes / 15 attempts | +0.40             |
+| Held out    | 20 passes / 30 attempts | 20 passes / 30 attempts | 0.00              |
 
 The fixture scripts define these scores. They demonstrate the measurement code.
 The project reports no measured model improvement. It made no paid call.
+
 The default live target is [ACI Patch Agent](https://github.com/altaal/aci-patch-agent).
 [The pin](data/target.json) records its source version and file hashes.
 The optional adapter passes an offline integration test against that version.
 
 Read [PLAN.md](PLAN.md) for the question, pilot gates, sources, and proposed costs.
-Read [TECHNICAL_OVERVIEW.md](TECHNICAL_OVERVIEW.md) for the worked lesson.
+Read [TECHNICAL_OVERVIEW.md](TECHNICAL_OVERVIEW.md) for the complete technical document.
+It includes the worked lessons, source contracts, event trace, calculations, tests, and pending live
+work.
 [FAILURES.md](FAILURES.md) retains rejected edits and limits.
 [VERIFIED.md](VERIFIED.md) contains the actual checks.
 The paid runner and final live experiment remain future work after approval.

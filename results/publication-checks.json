@@ -1,0 +1,115 @@
+{
+  "date": "2026-10-02",
+  "scope": "Documentation expansion and offline project publication",
+  "runtime_changed": false,
+  "paid_model_calls": 0,
+  "notes": [
+    "Command paths use portable placeholders. The external policy remains private.",
+    "Initial Ruff checks failed because the cache directory was not writable. Both no-cache retries passed.",
+    "All 20 tests passed with the pinned optional dependency.",
+    "The fresh demo reproduced all six saved files byte for byte.",
+    "STE reported 26 filename-only warnings across seven documents and no errors. These exact identifiers remain unchanged.",
+    "An intermediate verification-note modal warning was corrected. The final note passes.",
+    "mdsmith reports two retained document-size exceptions required by the complete-document request. Other reported prose issues were corrected.",
+    "Current-file and historical publication scans are separate checks.",
+    "The final content scan also checks this saved output before commit."
+  ],
+  "checks": [
+    {
+      "name": "tests",
+      "command": "PYTHONPATH=$PINNED_ACI_PATH python3 -m unittest discover -s tests -v",
+      "exit_code": 0,
+      "output": "test_real_loop_with_scripted_client_and_grader (test_aci.AciIntegrationTest.test_real_loop_with_scripted_client_and_grader) ... ok\ntest_override_preserves_recovery_and_original_messages (test_aci.TextTest.test_override_preserves_recovery_and_original_messages) ... ok\ntest_unknown_upstream_prompt_fails_closed (test_aci.TextTest.test_unknown_upstream_prompt_fails_closed) ... ok\ntest_bootstrap_keeps_paired_repeats (test_loop.LoopTest.test_bootstrap_keeps_paired_repeats) ... ok\ntest_demo_retains_rejections_and_one_patch (test_loop.LoopTest.test_demo_retains_rejections_and_one_patch) ... ok\ntest_edit_boundary_covers_paths_schema_and_empty_text (test_loop.LoopTest.test_edit_boundary_covers_paths_schema_and_empty_text) ... ok\ntest_empty_incomplete_duplicate_gates_fail (test_loop.LoopTest.test_empty_incomplete_duplicate_gates_fail) ... ok\ntest_error_attempts_preserved_and_gate_fails (test_loop.LoopTest.test_error_attempts_preserved_and_gate_fails) ... ok\ntest_every_pair_is_interleaved (test_loop.LoopTest.test_every_pair_is_interleaved) ... ok\ntest_existing_run_is_never_replaced (test_loop.LoopTest.test_existing_run_is_never_replaced) ... ok\ntest_family_overlap_rejected (test_loop.LoopTest.test_family_overlap_rejected) ... ok\ntest_final_is_once_only_and_rebuild_is_equal (test_loop.LoopTest.test_final_is_once_only_and_rebuild_is_equal) ... ok\ntest_final_overlap_rejected_before_any_attempt (test_loop.LoopTest.test_final_overlap_rejected_before_any_attempt) ... ok\ntest_frozen_edit_rejected (test_loop.LoopTest.test_frozen_edit_rejected) ... ok\ntest_heldout_never_enters_optimizer_or_search_ledger (test_loop.LoopTest.test_heldout_never_enters_optimizer_or_search_ledger) ... ok\ntest_missing_attempt_stays_in_denominator (test_loop.LoopTest.test_missing_attempt_stays_in_denominator) ... ok\ntest_representative_failure_blocks_later_gates (test_loop.LoopTest.test_representative_failure_blocks_later_gates) ... ok\ntest_retry_budget_counts_initial_proposal (test_loop.LoopTest.test_retry_budget_counts_initial_proposal) ... ok\ntest_scope_rejection_uses_budget_and_keeps_original (test_loop.LoopTest.test_scope_rejection_uses_budget_and_keeps_original) ... ok\ntest_zero_budget_rejected_before_output (test_loop.LoopTest.test_zero_budget_rejected_before_output) ... ok\n\n----------------------------------------------------------------------\nRan 20 tests in 0.470s\n\nOK\n"
+    },
+    {
+      "name": "ruff",
+      "command": "ruff check agent_optimization tests scripts",
+      "exit_code": 2,
+      "output": "error: Failed to initialize cache at <project>/.ruff_cache: Operation not permitted (os error 1)\nruff failed\n  Cause: Failed to create temporary file\n  Cause: No such file or directory (os error 2) at path \"<project>/.ruff_cache/0.14.14/.tmpKDIStF\"\n"
+    },
+    {
+      "name": "format",
+      "command": "ruff format --check agent_optimization tests scripts",
+      "exit_code": 2,
+      "output": "error: Failed to initialize cache at <project>/.ruff_cache: Operation not permitted (os error 1)\nruff failed\n  Cause: Failed to create temporary file\n  Cause: No such file or directory (os error 2) at path \"<project>/.ruff_cache/0.14.14/.tmplkxOg7\"\n"
+    },
+    {
+      "name": "vale",
+      "command": "vale --no-global --config=$PROSE_CONFIG *.md",
+      "exit_code": 0,
+      "output": "✔ 0 errors, 0 warnings and 0 suggestions in 7 files.\n"
+    },
+    {
+      "name": "ste",
+      "command": "python3 $STE_CHECK *.md",
+      "exit_code": 1,
+      "output": "EXPERIMENTS.md:13: VERB  'verify' is not approved; write 'make sure that' (dictionary)\nEXPERIMENTS.md:24: VERB  'verify' is not approved; write 'make sure that' (dictionary)\n2 findings (0 errors) in EXPERIMENTS.md\nFAILURES.md:5: VERB  'verify' is not approved; write 'make sure that' (dictionary)\nFAILURES.md:14: VERB  'verify' is not approved; write 'make sure that' (dictionary)\nFAILURES.md:43: VERB  'verify' is not approved; write 'make sure that' (dictionary)\nFAILURES.md:46: VERB  'verify' is not approved; write 'make sure that' (dictionary)\n4 findings (0 errors) in FAILURES.md\nFILE_INDEX.md:14: VERB  'verify' is not approved; write 'make sure that' (dictionary)\nFILE_INDEX.md:38: VERB  'verify' is not approved; write 'make sure that' (dictionary)\nFILE_INDEX.md:39: VERB  'verify' is not approved; write 'make sure that' (dictionary)\nFILE_INDEX.md:40: VERB  'verify' is not approved; write 'make sure that' (dictionary)\nFILE_INDEX.md:41: VERB  'verify' is not approved; write 'make sure that' (dictionary)\nFILE_INDEX.md:42: VERB  'verify' is not approved; write 'make sure that' (dictionary)\nFILE_INDEX.md:43: VERB  'verify' is not approved; write 'make sure that' (dictionary)\n7 findings (0 errors) in FILE_INDEX.md\nPLAN.md:7: VERB  'verify' is not approved; write 'make sure that' (dictionary)\n1 findings (0 errors) in PLAN.md\nREADME.md:23: VERB  'verify' is not approved; write 'make sure that' (dictionary)\nREADME.md:60: VERB  'verify' is not approved; write 'make sure that' (dictionary)\nREADME.md:79: VERB  'verify' is not approved; write 'make sure that' (dictionary)\n3 findings (0 errors) in README.md\nTECHNICAL_OVERVIEW.md:31: VERB  'verify' is not approved; write 'make sure that' (dictionary)\nTECHNICAL_OVERVIEW.md:32: VERB  'verify' is not approved; write 'make sure that' (dictionary)\nTECHNICAL_OVERVIEW.md:188: VERB  'verify' is not approved; write 'make sure that' (dictionary)\nTECHNICAL_OVERVIEW.md:190: VERB  'verify' is not approved; write 'make sure that' (dictionary)\nTECHNICAL_OVERVIEW.md:212: VERB  'verify' is not approved; write 'make sure that' (dictionary)\nTECHNICAL_OVERVIEW.md:235: VERB  'verify' is not approved; write 'make sure that' (dictionary)\nTECHNICAL_OVERVIEW.md:326: VERB  'verify' is not approved; write 'make sure that' (dictionary)\nTECHNICAL_OVERVIEW.md:1047: VERB  'verify' is not approved; write 'make sure that' (dictionary)\nTECHNICAL_OVERVIEW.md:1223: VERB  'verify' is not approved; write 'make sure that' (dictionary)\n9 findings (0 errors) in TECHNICAL_OVERVIEW.md\n0 findings (0 errors) in VERIFIED.md\n"
+    },
+    {
+      "name": "mdsmith",
+      "command": "mdsmith check --config $MARKDOWN_CONFIG --no-color TECHNICAL_OVERVIEW.md README.md PLAN.md VERIFIED.md FILE_INDEX.md",
+      "exit_code": 1,
+      "output": "TECHNICAL_OVERVIEW.md:1:1 MDS022 file too long (1254 > 300)\n1 | # Agent Optimization Loop: complete technical document\n····^\n2 | \n3 | This document explains the design, code, data, results, and operating procedures.\nTECHNICAL_OVERVIEW.md:1:1 MDS028 token budget exceeded (12031 > 8000, mode=heuristic:tokens-per-word=1.33); ~3031 words over budget\n1 | # Agent Optimization Loop: complete technical document\n····^\n2 | \n3 | This document explains the design, code, data, results, and operating procedures.\nVERIFIED.md:90:1 MDS023 paragraph too hard to read (readability index: 15.0, max 14.0); avg sentence length 10 words — try splitting long sentences\n88 | Those two size warnings remain intentional.\n89 | \n90 | No sentence-length, paragraph, or table-format exceptions remain in the edited documents.\n·····^\n91 | No checker guarantees ASD-STE100 compliance or a complete dictionary review.\nstats: checked=5 fixed=0 failures=3 unfixed=3\n"
+    },
+    {
+      "name": "secret-files",
+      "command": "gitleaks detect --source . --no-git --no-banner --redact",
+      "exit_code": 0,
+      "output": "1:46PM INF scanned ~1317553 bytes (1.32 MB) in 445ms\n1:46PM INF no leaks found\n"
+    },
+    {
+      "name": "secret-history",
+      "command": "gitleaks detect --source . --no-banner --redact",
+      "exit_code": 0,
+      "output": "1:46PM INF 1 commits scanned.\n1:46PM INF scanned ~1218234 bytes (1.22 MB) in 556ms\n1:46PM INF no leaks found\n"
+    },
+    {
+      "name": "documentation",
+      "command": "python3 <external-document-check>",
+      "exit_code": 0,
+      "output": "All 8 package hashes match the saved experiment.\nSCRIPTED DEMO: no model calls or code execution\nAccepted clusters: 1\ndevelopment: 9/15 -> 15/15; paired interval [0.0, 0.8]\nheldout: 20/30 -> 20/30; paired interval [0.0, 0.0]\nSaved ledger.jsonl, frozen.json, evaluation-lock.json, report.json\nAll 6 new demo artifacts equal the saved artifacts byte for byte.\nReport reconstruction preserves the exact report.\nDocumented event counts, decisions, and clamp outcomes match the ledger.\nAll 123 local document links and supported anchors resolve.\nAll source excerpts with line references equal the cited source.\nAll 20 test identifiers appear in the coverage table.\nThe file index accounts for all 43 project artifacts.\n"
+    },
+    {
+      "name": "publication",
+      "command": "python3 scripts/scan_publication.py --blocked-terms $PUBLICATION_POLICY",
+      "exit_code": 0,
+      "output": "Publication scan: 43 files, 0 matches\n"
+    },
+    {
+      "name": "ruff-retry",
+      "command": "ruff check --no-cache agent_optimization tests scripts",
+      "exit_code": 0,
+      "output": "All checks passed!\n"
+    },
+    {
+      "name": "format-retry",
+      "command": "ruff format --no-cache --check agent_optimization tests scripts",
+      "exit_code": 0,
+      "output": "12 files already formatted\n"
+    },
+    {
+      "name": "mdsmith-final",
+      "command": "mdsmith check --config $MARKDOWN_CONFIG --no-color TECHNICAL_OVERVIEW.md README.md PLAN.md VERIFIED.md FILE_INDEX.md",
+      "exit_code": 1,
+      "output": "TECHNICAL_OVERVIEW.md:1:1 MDS022 file too long (1254 > 300)\n1 | # Agent Optimization Loop: complete technical document\n····^\n2 | \n3 | This document explains the design, code, data, results, and operating procedures.\nTECHNICAL_OVERVIEW.md:1:1 MDS028 token budget exceeded (12031 > 8000, mode=heuristic:tokens-per-word=1.33); ~3031 words over budget\n1 | # Agent Optimization Loop: complete technical document\n····^\n2 | \n3 | This document explains the design, code, data, results, and operating procedures.\nstats: checked=5 fixed=0 failures=2 unfixed=2\n"
+    },
+    {
+      "name": "prose-final",
+      "command": "vale --no-global --config=$PROSE_CONFIG VERIFIED.md && python3 $STE_CHECK VERIFIED.md",
+      "exit_code": 1,
+      "output": "✔ 0 errors, 0 warnings and 0 suggestions in 1 file.\nVERIFIED.md:99: MODAL  'could' not approved for possibility; write 'can' (dictionary: COULD entry)\n1 findings (1 errors) in VERIFIED.md\n"
+    },
+    {
+      "name": "history-publication",
+      "command": "python3 <external-history-check> && git diff --check",
+      "exit_code": 0,
+      "output": "Historical publication scan: 37 text blobs and all commit messages, 0 matches\n"
+    },
+    {
+      "name": "prose-correction-final",
+      "command": "vale --no-global --config=\"$PROSE_CONFIG\" VERIFIED.md && python3 \"$STE_CHECK\" VERIFIED.md",
+      "exit_code": 0,
+      "output": "✔ 0 errors, 0 warnings and 0 suggestions in 1 file.\n0 findings (0 errors) in VERIFIED.md\n"
+    }
+  ]
+}
