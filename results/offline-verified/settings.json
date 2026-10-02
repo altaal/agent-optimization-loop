@@ -1,0 +1,31 @@
+{
+  "case_hashes": {
+    "chunked": "eba3dff38050d1a4402257b71733516774945b0116998a206e4682a0f16a770c",
+    "merge-intervals": "3233d357d0844b5254fdb1a46d94ac28c8790aabb85e3ce82f4ce4106447b49f",
+    "normalize-method": "d786c7db188e18ea68e10035f332532ea186d5a70bce635580f74ec576673338",
+    "parse-bool": "7158034f6238cf49a60a6b0067ffa8ff06b09c8c5a24744fb5be850f69e7b7c0",
+    "unique-stable": "52e9c87506c47382be53f9002a7b141d3ae5a7e18ac301b3211edabbbc3cd05c"
+  },
+  "code_sha256": {
+    "__init__.py": "4f0ddee7ec0c7e0a7c453467b7faf1c3fb720994d97cd74f879df0e418579241",
+    "__main__.py": "6d8b7d7846a845059d7a3107143f11131f63c5511d669b44085b15ec5e3d2279",
+    "aci.py": "e3cbb872d85a1de1a9850764e6b89d24b5481df1a7c9c127f8f3b2524deade29",
+    "cli.py": "59287f28d1c4b82184dd4d157662e552b59adf35823b608df583a16c47eb9065",
+    "engine.py": "3ba252d9c80dbe769b16e5d41b26f1304288bacf6f69c5817eea3310ea8b351a",
+    "evaluation.py": "72c9ad7990995d4a9192d1ccbd59ae895a33d027b718a0529e7e10479148eda9",
+    "records.py": "62fa75523aae87f240bde1b92be677e9b5ffd4a13ebb7ba4e0027aeb40beb6da",
+    "scripted.py": "2303712e41426dba3bf0fb0a399d772bc193d0c89f8e1c3a0281a84a7e417c61"
+  },
+  "initial": {
+    "instructions/system.txt": "You repair one small Python function in solution.py.\nUse view to read numbered lines, edit to replace an inclusive range, test to run\nexamples, and submit when finished. Make exactly one tool call per response.\nTool observations describe the actual current state. Correct a refused edit using\nthat feedback. Tests check only examples; implement the entire issue specification.\nKeep the named function and signature. Use only Python's standard library.\nWhen a test fails, compare the expected result with the actual result.\nTrace the failing input through the current code and identify the statement\nthat explains the difference. Inspect the current code before editing.\nMake one small change, then test again. If the same failure remains, do not\nrepeat the same edit; revise your explanation of the bug.\nIf a tool reports that an action made no change, do not repeat that action unchanged. Inspect the current code and recent feedback, then choose a useful next step.\nYou cannot edit the evaluator. Submit the code, not a verbal claim of success.\n",
+    "instructions/tools.json": "{\n  \"edit\": \"Replace an inclusive line range. Invalid Python syntax is rejected without changing the source.\",\n  \"submit\": \"Finish and submit the current source for separate evaluation.\",\n  \"test\": \"Run example checks in an isolated container. Passing examples is not final success.\",\n  \"view\": \"Show numbered lines of solution.py.\"\n}\n"
+  },
+  "max_clusters": 2,
+  "mode": "scripted",
+  "proposals_per_cluster": 3,
+  "seeds": [
+    1701,
+    2903,
+    4109
+  ]
+}

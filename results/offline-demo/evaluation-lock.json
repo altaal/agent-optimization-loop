@@ -1,0 +1,647 @@
+{
+  "attempts": [
+    {
+      "case": "normalize-method",
+      "condition": "before",
+      "family": "normalize-method",
+      "seed": 1701,
+      "split": "development"
+    },
+    {
+      "case": "normalize-method",
+      "condition": "after",
+      "family": "normalize-method",
+      "seed": 1701,
+      "split": "development"
+    },
+    {
+      "case": "normalize-method",
+      "condition": "before",
+      "family": "normalize-method",
+      "seed": 2903,
+      "split": "development"
+    },
+    {
+      "case": "normalize-method",
+      "condition": "after",
+      "family": "normalize-method",
+      "seed": 2903,
+      "split": "development"
+    },
+    {
+      "case": "normalize-method",
+      "condition": "before",
+      "family": "normalize-method",
+      "seed": 4109,
+      "split": "development"
+    },
+    {
+      "case": "normalize-method",
+      "condition": "after",
+      "family": "normalize-method",
+      "seed": 4109,
+      "split": "development"
+    },
+    {
+      "case": "chunked",
+      "condition": "before",
+      "family": "chunked",
+      "seed": 1701,
+      "split": "development"
+    },
+    {
+      "case": "chunked",
+      "condition": "after",
+      "family": "chunked",
+      "seed": 1701,
+      "split": "development"
+    },
+    {
+      "case": "chunked",
+      "condition": "before",
+      "family": "chunked",
+      "seed": 2903,
+      "split": "development"
+    },
+    {
+      "case": "chunked",
+      "condition": "after",
+      "family": "chunked",
+      "seed": 2903,
+      "split": "development"
+    },
+    {
+      "case": "chunked",
+      "condition": "before",
+      "family": "chunked",
+      "seed": 4109,
+      "split": "development"
+    },
+    {
+      "case": "chunked",
+      "condition": "after",
+      "family": "chunked",
+      "seed": 4109,
+      "split": "development"
+    },
+    {
+      "case": "merge-intervals",
+      "condition": "before",
+      "family": "merge-intervals",
+      "seed": 1701,
+      "split": "development"
+    },
+    {
+      "case": "merge-intervals",
+      "condition": "after",
+      "family": "merge-intervals",
+      "seed": 1701,
+      "split": "development"
+    },
+    {
+      "case": "merge-intervals",
+      "condition": "before",
+      "family": "merge-intervals",
+      "seed": 2903,
+      "split": "development"
+    },
+    {
+      "case": "merge-intervals",
+      "condition": "after",
+      "family": "merge-intervals",
+      "seed": 2903,
+      "split": "development"
+    },
+    {
+      "case": "merge-intervals",
+      "condition": "before",
+      "family": "merge-intervals",
+      "seed": 4109,
+      "split": "development"
+    },
+    {
+      "case": "merge-intervals",
+      "condition": "after",
+      "family": "merge-intervals",
+      "seed": 4109,
+      "split": "development"
+    },
+    {
+      "case": "parse-bool",
+      "condition": "before",
+      "family": "parse-bool",
+      "seed": 1701,
+      "split": "development"
+    },
+    {
+      "case": "parse-bool",
+      "condition": "after",
+      "family": "parse-bool",
+      "seed": 1701,
+      "split": "development"
+    },
+    {
+      "case": "parse-bool",
+      "condition": "before",
+      "family": "parse-bool",
+      "seed": 2903,
+      "split": "development"
+    },
+    {
+      "case": "parse-bool",
+      "condition": "after",
+      "family": "parse-bool",
+      "seed": 2903,
+      "split": "development"
+    },
+    {
+      "case": "parse-bool",
+      "condition": "before",
+      "family": "parse-bool",
+      "seed": 4109,
+      "split": "development"
+    },
+    {
+      "case": "parse-bool",
+      "condition": "after",
+      "family": "parse-bool",
+      "seed": 4109,
+      "split": "development"
+    },
+    {
+      "case": "unique-stable",
+      "condition": "before",
+      "family": "unique-stable",
+      "seed": 1701,
+      "split": "development"
+    },
+    {
+      "case": "unique-stable",
+      "condition": "after",
+      "family": "unique-stable",
+      "seed": 1701,
+      "split": "development"
+    },
+    {
+      "case": "unique-stable",
+      "condition": "before",
+      "family": "unique-stable",
+      "seed": 2903,
+      "split": "development"
+    },
+    {
+      "case": "unique-stable",
+      "condition": "after",
+      "family": "unique-stable",
+      "seed": 2903,
+      "split": "development"
+    },
+    {
+      "case": "unique-stable",
+      "condition": "before",
+      "family": "unique-stable",
+      "seed": 4109,
+      "split": "development"
+    },
+    {
+      "case": "unique-stable",
+      "condition": "after",
+      "family": "unique-stable",
+      "seed": 4109,
+      "split": "development"
+    },
+    {
+      "case": "clamp",
+      "condition": "before",
+      "family": "clamp",
+      "seed": 1701,
+      "split": "heldout"
+    },
+    {
+      "case": "clamp",
+      "condition": "after",
+      "family": "clamp",
+      "seed": 1701,
+      "split": "heldout"
+    },
+    {
+      "case": "clamp",
+      "condition": "before",
+      "family": "clamp",
+      "seed": 2903,
+      "split": "heldout"
+    },
+    {
+      "case": "clamp",
+      "condition": "after",
+      "family": "clamp",
+      "seed": 2903,
+      "split": "heldout"
+    },
+    {
+      "case": "clamp",
+      "condition": "before",
+      "family": "clamp",
+      "seed": 4109,
+      "split": "heldout"
+    },
+    {
+      "case": "clamp",
+      "condition": "after",
+      "family": "clamp",
+      "seed": 4109,
+      "split": "heldout"
+    },
+    {
+      "case": "safe-mean",
+      "condition": "before",
+      "family": "safe-mean",
+      "seed": 1701,
+      "split": "heldout"
+    },
+    {
+      "case": "safe-mean",
+      "condition": "after",
+      "family": "safe-mean",
+      "seed": 1701,
+      "split": "heldout"
+    },
+    {
+      "case": "safe-mean",
+      "condition": "before",
+      "family": "safe-mean",
+      "seed": 2903,
+      "split": "heldout"
+    },
+    {
+      "case": "safe-mean",
+      "condition": "after",
+      "family": "safe-mean",
+      "seed": 2903,
+      "split": "heldout"
+    },
+    {
+      "case": "safe-mean",
+      "condition": "before",
+      "family": "safe-mean",
+      "seed": 4109,
+      "split": "heldout"
+    },
+    {
+      "case": "safe-mean",
+      "condition": "after",
+      "family": "safe-mean",
+      "seed": 4109,
+      "split": "heldout"
+    },
+    {
+      "case": "flatten-once",
+      "condition": "before",
+      "family": "flatten-once",
+      "seed": 1701,
+      "split": "heldout"
+    },
+    {
+      "case": "flatten-once",
+      "condition": "after",
+      "family": "flatten-once",
+      "seed": 1701,
+      "split": "heldout"
+    },
+    {
+      "case": "flatten-once",
+      "condition": "before",
+      "family": "flatten-once",
+      "seed": 2903,
+      "split": "heldout"
+    },
+    {
+      "case": "flatten-once",
+      "condition": "after",
+      "family": "flatten-once",
+      "seed": 2903,
+      "split": "heldout"
+    },
+    {
+      "case": "flatten-once",
+      "condition": "before",
+      "family": "flatten-once",
+      "seed": 4109,
+      "split": "heldout"
+    },
+    {
+      "case": "flatten-once",
+      "condition": "after",
+      "family": "flatten-once",
+      "seed": 4109,
+      "split": "heldout"
+    },
+    {
+      "case": "count-words",
+      "condition": "before",
+      "family": "count-words",
+      "seed": 1701,
+      "split": "heldout"
+    },
+    {
+      "case": "count-words",
+      "condition": "after",
+      "family": "count-words",
+      "seed": 1701,
+      "split": "heldout"
+    },
+    {
+      "case": "count-words",
+      "condition": "before",
+      "family": "count-words",
+      "seed": 2903,
+      "split": "heldout"
+    },
+    {
+      "case": "count-words",
+      "condition": "after",
+      "family": "count-words",
+      "seed": 2903,
+      "split": "heldout"
+    },
+    {
+      "case": "count-words",
+      "condition": "before",
+      "family": "count-words",
+      "seed": 4109,
+      "split": "heldout"
+    },
+    {
+      "case": "count-words",
+      "condition": "after",
+      "family": "count-words",
+      "seed": 4109,
+      "split": "heldout"
+    },
+    {
+      "case": "rotate-left",
+      "condition": "before",
+      "family": "rotate-left",
+      "seed": 1701,
+      "split": "heldout"
+    },
+    {
+      "case": "rotate-left",
+      "condition": "after",
+      "family": "rotate-left",
+      "seed": 1701,
+      "split": "heldout"
+    },
+    {
+      "case": "rotate-left",
+      "condition": "before",
+      "family": "rotate-left",
+      "seed": 2903,
+      "split": "heldout"
+    },
+    {
+      "case": "rotate-left",
+      "condition": "after",
+      "family": "rotate-left",
+      "seed": 2903,
+      "split": "heldout"
+    },
+    {
+      "case": "rotate-left",
+      "condition": "before",
+      "family": "rotate-left",
+      "seed": 4109,
+      "split": "heldout"
+    },
+    {
+      "case": "rotate-left",
+      "condition": "after",
+      "family": "rotate-left",
+      "seed": 4109,
+      "split": "heldout"
+    },
+    {
+      "case": "palindrome",
+      "condition": "before",
+      "family": "palindrome",
+      "seed": 1701,
+      "split": "heldout"
+    },
+    {
+      "case": "palindrome",
+      "condition": "after",
+      "family": "palindrome",
+      "seed": 1701,
+      "split": "heldout"
+    },
+    {
+      "case": "palindrome",
+      "condition": "before",
+      "family": "palindrome",
+      "seed": 2903,
+      "split": "heldout"
+    },
+    {
+      "case": "palindrome",
+      "condition": "after",
+      "family": "palindrome",
+      "seed": 2903,
+      "split": "heldout"
+    },
+    {
+      "case": "palindrome",
+      "condition": "before",
+      "family": "palindrome",
+      "seed": 4109,
+      "split": "heldout"
+    },
+    {
+      "case": "palindrome",
+      "condition": "after",
+      "family": "palindrome",
+      "seed": 4109,
+      "split": "heldout"
+    },
+    {
+      "case": "parse-pairs",
+      "condition": "before",
+      "family": "parse-pairs",
+      "seed": 1701,
+      "split": "heldout"
+    },
+    {
+      "case": "parse-pairs",
+      "condition": "after",
+      "family": "parse-pairs",
+      "seed": 1701,
+      "split": "heldout"
+    },
+    {
+      "case": "parse-pairs",
+      "condition": "before",
+      "family": "parse-pairs",
+      "seed": 2903,
+      "split": "heldout"
+    },
+    {
+      "case": "parse-pairs",
+      "condition": "after",
+      "family": "parse-pairs",
+      "seed": 2903,
+      "split": "heldout"
+    },
+    {
+      "case": "parse-pairs",
+      "condition": "before",
+      "family": "parse-pairs",
+      "seed": 4109,
+      "split": "heldout"
+    },
+    {
+      "case": "parse-pairs",
+      "condition": "after",
+      "family": "parse-pairs",
+      "seed": 4109,
+      "split": "heldout"
+    },
+    {
+      "case": "running-total",
+      "condition": "before",
+      "family": "running-total",
+      "seed": 1701,
+      "split": "heldout"
+    },
+    {
+      "case": "running-total",
+      "condition": "after",
+      "family": "running-total",
+      "seed": 1701,
+      "split": "heldout"
+    },
+    {
+      "case": "running-total",
+      "condition": "before",
+      "family": "running-total",
+      "seed": 2903,
+      "split": "heldout"
+    },
+    {
+      "case": "running-total",
+      "condition": "after",
+      "family": "running-total",
+      "seed": 2903,
+      "split": "heldout"
+    },
+    {
+      "case": "running-total",
+      "condition": "before",
+      "family": "running-total",
+      "seed": 4109,
+      "split": "heldout"
+    },
+    {
+      "case": "running-total",
+      "condition": "after",
+      "family": "running-total",
+      "seed": 4109,
+      "split": "heldout"
+    },
+    {
+      "case": "strip-suffix",
+      "condition": "before",
+      "family": "strip-suffix",
+      "seed": 1701,
+      "split": "heldout"
+    },
+    {
+      "case": "strip-suffix",
+      "condition": "after",
+      "family": "strip-suffix",
+      "seed": 1701,
+      "split": "heldout"
+    },
+    {
+      "case": "strip-suffix",
+      "condition": "before",
+      "family": "strip-suffix",
+      "seed": 2903,
+      "split": "heldout"
+    },
+    {
+      "case": "strip-suffix",
+      "condition": "after",
+      "family": "strip-suffix",
+      "seed": 2903,
+      "split": "heldout"
+    },
+    {
+      "case": "strip-suffix",
+      "condition": "before",
+      "family": "strip-suffix",
+      "seed": 4109,
+      "split": "heldout"
+    },
+    {
+      "case": "strip-suffix",
+      "condition": "after",
+      "family": "strip-suffix",
+      "seed": 4109,
+      "split": "heldout"
+    },
+    {
+      "case": "transpose",
+      "condition": "before",
+      "family": "transpose",
+      "seed": 1701,
+      "split": "heldout"
+    },
+    {
+      "case": "transpose",
+      "condition": "after",
+      "family": "transpose",
+      "seed": 1701,
+      "split": "heldout"
+    },
+    {
+      "case": "transpose",
+      "condition": "before",
+      "family": "transpose",
+      "seed": 2903,
+      "split": "heldout"
+    },
+    {
+      "case": "transpose",
+      "condition": "after",
+      "family": "transpose",
+      "seed": 2903,
+      "split": "heldout"
+    },
+    {
+      "case": "transpose",
+      "condition": "before",
+      "family": "transpose",
+      "seed": 4109,
+      "split": "heldout"
+    },
+    {
+      "case": "transpose",
+      "condition": "after",
+      "family": "transpose",
+      "seed": 4109,
+      "split": "heldout"
+    }
+  ],
+  "heldout_hashes": {
+    "clamp": "6fe1eb877bebadafd57172937f49bce4a5a17ac3d258fc9531c8db4ee0b355eb",
+    "count-words": "6977a3538baea6b4cdfcf280ccdbe010e3fc854c7e84fee417f2a5e28b736826",
+    "flatten-once": "6bdc6c9c728cf02eb740055d39541b7ad89494ab8a2cdcf3cac96724c886bd26",
+    "palindrome": "dae5718515217d98ceff7bfba63fda35fe242c1674906f5ebbd01544a20b3668",
+    "parse-pairs": "f5b6142b763c997f38990688bf16df9c1dabfb442494adf545c64d9b388f8152",
+    "rotate-left": "599c4f3c3c445e2159e31c9a2191df346b6480c4813125ae4cae46e53b0e214a",
+    "running-total": "be7655f33d70c568200fb31bca0c495ddfb43aa8b441b7e9b5e149289269716c",
+    "safe-mean": "6dbf00514091f10f5d24a6fbf9eb473639f8cd828e92d8e7a50d72a3d6e65b00",
+    "strip-suffix": "bfeb5670f54b3ac62125c222602905c0c3ccaa3cccabbdf331b22c1bc4de3b44",
+    "transpose": "49cd54e9c55b23d82b2695c7bb21298dabac6bd74915a367bd063b0a334e6419"
+  },
+  "instruction_hash": "f8041972e3f1cdf7bd554746ac8a543678cda5a65683af2678ec539f4b39dd26"
+}

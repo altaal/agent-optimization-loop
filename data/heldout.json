@@ -1,0 +1,62 @@
+[
+  {
+    "id": "clamp",
+    "family": "clamp",
+    "issue": "Clamp a number to the inclusive range [low, high]. Raise ValueError if low > high.",
+    "source": "def clamp(value, low, high):\n    return min(value, high)\n"
+  },
+  {
+    "id": "safe-mean",
+    "family": "safe-mean",
+    "issue": "Return the arithmetic mean of a list of numbers as a float. Raise ValueError for an empty list.",
+    "source": "def safe_mean(numbers):\n    return sum(numbers) // len(numbers)\n"
+  },
+  {
+    "id": "flatten-once",
+    "family": "flatten-once",
+    "issue": "Flatten one level of a list of lists, preserving order. Inner items can themselves be lists and must remain unchanged.",
+    "source": "def flatten_once(groups):\n    return groups[0] if groups else []\n"
+  },
+  {
+    "id": "count-words",
+    "family": "count-words",
+    "issue": "Split a string on whitespace, casefold each word, and return a dict of word counts. Punctuation remains part of words. Empty or whitespace-only input returns {}.",
+    "source": "def count_words(text):\n    return {word: 1 for word in text.split()}\n"
+  },
+  {
+    "id": "rotate-left",
+    "family": "rotate-left",
+    "issue": "Rotate a list left by k positions, wrapping around. Negative k rotates right. Empty input returns []. k must be an int, excluding bool; otherwise raise TypeError.",
+    "source": "def rotate_left(items, k):\n    return items[k:] + items[:k]\n"
+  },
+  {
+    "id": "palindrome",
+    "family": "palindrome",
+    "issue": "Return a bool saying whether text is a palindrome after casefolding and removing non-alphanumeric characters using str.isalnum. The empty cleaned string is a palindrome.",
+    "source": "def is_palindrome(text):\n    return text == text[::-1]\n"
+  },
+  {
+    "id": "parse-pairs",
+    "family": "parse-pairs",
+    "issue": "Parse comma-separated key:value items into a dict. Strip whitespace from keys and values; split each item at its first colon. Empty or whitespace-only input returns {}. Duplicate keys use the last value. Raise ValueError for a missing colon or empty key.",
+    "source": "def parse_pairs(text):\n    return dict(item.split(':') for item in text.split(','))\n"
+  },
+  {
+    "id": "running-total",
+    "family": "running-total",
+    "issue": "Return a list containing the cumulative sum after each number, preserving order. Empty input returns [].",
+    "source": "def running_total(values):\n    return [sum(values)]\n"
+  },
+  {
+    "id": "strip-suffix",
+    "family": "strip-suffix",
+    "issue": "Remove exactly one occurrence of suffix from the end of text if suffix is nonempty and matches. Otherwise return text unchanged.",
+    "source": "def strip_suffix(text, suffix):\n    return text.rstrip(suffix)\n"
+  },
+  {
+    "id": "transpose",
+    "family": "transpose",
+    "issue": "Transpose a rectangular list of row lists into column lists. [] and rows of length zero return []. Raise ValueError for rows of unequal lengths.",
+    "source": "def transpose(matrix):\n    return [list(row) for row in zip(*matrix)]\n"
+  }
+]

@@ -1,0 +1,7 @@
+--- a/instructions/system.txt
++++ b/instructions/system.txt
+@@ -11,3 +11,4 @@
+ repeat the same edit; revise your explanation of the bug.
+ If a tool reports that an action made no change, do not repeat that action unchanged. Inspect the current code and recent feedback, then choose a useful next step.
+ You cannot edit the evaluator. Submit the code, not a verbal claim of success.
++Check every issue requirement, then submit the completed repair.

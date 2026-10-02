@@ -1,0 +1,108 @@
+{
+  "unit_tests": {
+    "command": [
+      "python3",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-v"
+    ],
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": "test_real_loop_with_scripted_client_and_grader (test_aci.AciIntegrationTest.test_real_loop_with_scripted_client_and_grader) ... ok\ntest_override_preserves_recovery_and_original_messages (test_aci.TextTest.test_override_preserves_recovery_and_original_messages) ... ok\ntest_unknown_upstream_prompt_fails_closed (test_aci.TextTest.test_unknown_upstream_prompt_fails_closed) ... ok\ntest_bootstrap_keeps_paired_repeats (test_loop.LoopTest.test_bootstrap_keeps_paired_repeats) ... ok\ntest_demo_retains_rejections_and_one_patch (test_loop.LoopTest.test_demo_retains_rejections_and_one_patch) ... ok\ntest_edit_boundary_covers_paths_schema_and_empty_text (test_loop.LoopTest.test_edit_boundary_covers_paths_schema_and_empty_text) ... ok\ntest_empty_incomplete_duplicate_gates_fail (test_loop.LoopTest.test_empty_incomplete_duplicate_gates_fail) ... ok\ntest_error_attempts_preserved_and_gate_fails (test_loop.LoopTest.test_error_attempts_preserved_and_gate_fails) ... ok\ntest_every_pair_is_interleaved (test_loop.LoopTest.test_every_pair_is_interleaved) ... ok\ntest_existing_run_is_never_replaced (test_loop.LoopTest.test_existing_run_is_never_replaced) ... ok\ntest_family_overlap_rejected (test_loop.LoopTest.test_family_overlap_rejected) ... ok\ntest_final_is_once_only_and_rebuild_is_equal (test_loop.LoopTest.test_final_is_once_only_and_rebuild_is_equal) ... ok\ntest_final_overlap_rejected_before_any_attempt (test_loop.LoopTest.test_final_overlap_rejected_before_any_attempt) ... ok\ntest_frozen_edit_rejected (test_loop.LoopTest.test_frozen_edit_rejected) ... ok\ntest_heldout_never_enters_optimizer_or_search_ledger (test_loop.LoopTest.test_heldout_never_enters_optimizer_or_search_ledger) ... ok\ntest_missing_attempt_stays_in_denominator (test_loop.LoopTest.test_missing_attempt_stays_in_denominator) ... ok\ntest_representative_failure_blocks_later_gates (test_loop.LoopTest.test_representative_failure_blocks_later_gates) ... ok\ntest_retry_budget_counts_initial_proposal (test_loop.LoopTest.test_retry_budget_counts_initial_proposal) ... ok\ntest_scope_rejection_uses_budget_and_keeps_original (test_loop.LoopTest.test_scope_rejection_uses_budget_and_keeps_original) ... ok\ntest_zero_budget_rejected_before_output (test_loop.LoopTest.test_zero_budget_rejected_before_output) ... ok\n\n----------------------------------------------------------------------\nRan 20 tests in 0.271s\n\nOK\n"
+  },
+  "ruff": {
+    "command": [
+      "ruff",
+      "check",
+      "--no-cache",
+      "agent_optimization",
+      "tests",
+      "scripts"
+    ],
+    "exit_code": 0,
+    "stdout": "All checks passed!\n",
+    "stderr": ""
+  },
+  "format": {
+    "command": [
+      "ruff",
+      "format",
+      "--check",
+      "--no-cache",
+      "agent_optimization",
+      "tests",
+      "scripts"
+    ],
+    "exit_code": 0,
+    "stdout": "12 files already formatted\n",
+    "stderr": ""
+  },
+  "publication": {
+    "command": [
+      "python3",
+      "scripts/scan_publication.py",
+      "--blocked-terms",
+      "$PUBLICATION_POLICY"
+    ],
+    "exit_code": 0,
+    "stdout": "Publication scan: 42 files, 0 matches\n",
+    "stderr": ""
+  },
+  "gitleaks": {
+    "command": [
+      "gitleaks",
+      "detect",
+      "--source",
+      ".",
+      "--no-git",
+      "--no-banner"
+    ],
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": "1:21PM INF scanned ~1211964 bytes (1.21 MB) in 185ms\n1:21PM INF no leaks found\n"
+  },
+  "vale": {
+    "command": [
+      "vale",
+      "--config",
+      "$PROSE_CONFIG",
+      "--output=line",
+      "EXPERIMENTS.md",
+      "FAILURES.md",
+      "FILE_INDEX.md",
+      "PLAN.md",
+      "README.md",
+      "TECHNICAL_OVERVIEW.md",
+      "VERIFIED.md"
+    ],
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  "prose": {
+    "command": [
+      "python3",
+      "$STE_CHECK",
+      "EXPERIMENTS.md",
+      "FAILURES.md",
+      "FILE_INDEX.md",
+      "PLAN.md",
+      "README.md",
+      "TECHNICAL_OVERVIEW.md",
+      "VERIFIED.md"
+    ],
+    "exit_code": 1,
+    "stdout": "EXPERIMENTS.md:13: VERB  'verify' is not approved; write 'make sure that' (dictionary)\nEXPERIMENTS.md:24: VERB  'verify' is not approved; write 'make sure that' (dictionary)\n2 findings (0 errors) in EXPERIMENTS.md\nFAILURES.md:5: VERB  'verify' is not approved; write 'make sure that' (dictionary)\nFAILURES.md:14: VERB  'verify' is not approved; write 'make sure that' (dictionary)\nFAILURES.md:43: VERB  'verify' is not approved; write 'make sure that' (dictionary)\nFAILURES.md:46: VERB  'verify' is not approved; write 'make sure that' (dictionary)\n4 findings (0 errors) in FAILURES.md\n0 findings (0 errors) in FILE_INDEX.md\nPLAN.md:7: VERB  'verify' is not approved; write 'make sure that' (dictionary)\n1 findings (0 errors) in PLAN.md\nREADME.md:23: VERB  'verify' is not approved; write 'make sure that' (dictionary)\nREADME.md:60: VERB  'verify' is not approved; write 'make sure that' (dictionary)\nREADME.md:76: VERB  'verify' is not approved; write 'make sure that' (dictionary)\n3 findings (0 errors) in README.md\nTECHNICAL_OVERVIEW.md:11: VERB  'verify' is not approved; write 'make sure that' (dictionary)\nTECHNICAL_OVERVIEW.md:12: VERB  'verify' is not approved; write 'make sure that' (dictionary)\nTECHNICAL_OVERVIEW.md:168: VERB  'verify' is not approved; write 'make sure that' (dictionary)\nTECHNICAL_OVERVIEW.md:170: VERB  'verify' is not approved; write 'make sure that' (dictionary)\nTECHNICAL_OVERVIEW.md:192: VERB  'verify' is not approved; write 'make sure that' (dictionary)\nTECHNICAL_OVERVIEW.md:215: VERB  'verify' is not approved; write 'make sure that' (dictionary)\nTECHNICAL_OVERVIEW.md:306: VERB  'verify' is not approved; write 'make sure that' (dictionary)\n7 findings (0 errors) in TECHNICAL_OVERVIEW.md\n0 findings (0 errors) in VERIFIED.md\n",
+    "stderr": ""
+  },
+  "context": {
+    "python": "3.12.12",
+    "ruff": "0.14.14",
+    "aci_commit": "bc00468557a2af932ddc11ca2983714eb59c5845",
+    "external_paths": "Command displays use named variables for external policy and prose scripts.",
+    "paid_calls": 0
+  }
+}

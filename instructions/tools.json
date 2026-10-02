@@ -1,0 +1,6 @@
+{
+  "view": "Show numbered lines of solution.py.",
+  "edit": "Replace an inclusive line range. Invalid Python syntax is rejected without changing the source.",
+  "test": "Run example checks in an isolated container. Passing examples is not final success.",
+  "submit": "Finish and submit the current source for separate evaluation."
+}

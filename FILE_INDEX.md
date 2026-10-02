@@ -1,0 +1,49 @@
+# Project files
+
+This index lists the authored files in this repository.
+Git metadata and generated caches are excluded.
+
+| File |
+| --- |
+| [.gitignore](.gitignore) |
+| [EXPERIMENTS.md](EXPERIMENTS.md) |
+| [FAILURES.md](FAILURES.md) |
+| [FILE_INDEX.md](FILE_INDEX.md) |
+| [LICENSE](LICENSE) |
+| [PLAN.md](PLAN.md) |
+| [README.md](README.md) |
+| [TECHNICAL_OVERVIEW.md](TECHNICAL_OVERVIEW.md) |
+| [VERIFIED.md](VERIFIED.md) |
+| [agent_optimization/__init__.py](agent_optimization/__init__.py) |
+| [agent_optimization/__main__.py](agent_optimization/__main__.py) |
+| [agent_optimization/aci.py](agent_optimization/aci.py) |
+| [agent_optimization/cli.py](agent_optimization/cli.py) |
+| [agent_optimization/engine.py](agent_optimization/engine.py) |
+| [agent_optimization/evaluation.py](agent_optimization/evaluation.py) |
+| [agent_optimization/records.py](agent_optimization/records.py) |
+| [agent_optimization/scripted.py](agent_optimization/scripted.py) |
+| [data/development.json](data/development.json) |
+| [data/heldout.json](data/heldout.json) |
+| [data/pricing.json](data/pricing.json) |
+| [data/target.json](data/target.json) |
+| [instructions/system.txt](instructions/system.txt) |
+| [instructions/tools.json](instructions/tools.json) |
+| [pyproject.toml](pyproject.toml) |
+| [results/checks.json](results/checks.json) |
+| [results/offline-demo/evaluation-lock.json](results/offline-demo/evaluation-lock.json) |
+| [results/offline-demo/frozen.json](results/offline-demo/frozen.json) |
+| [results/offline-demo/ledger.jsonl](results/offline-demo/ledger.jsonl) |
+| [results/offline-demo/patch-01.diff](results/offline-demo/patch-01.diff) |
+| [results/offline-demo/report.json](results/offline-demo/report.json) |
+| [results/offline-demo/settings.json](results/offline-demo/settings.json) |
+| [results/offline-verified/evaluation-lock.json](results/offline-verified/evaluation-lock.json) |
+| [results/offline-verified/frozen.json](results/offline-verified/frozen.json) |
+| [results/offline-verified/ledger.jsonl](results/offline-verified/ledger.jsonl) |
+| [results/offline-verified/patch-01.diff](results/offline-verified/patch-01.diff) |
+| [results/offline-verified/report.json](results/offline-verified/report.json) |
+| [results/offline-verified/settings.json](results/offline-verified/settings.json) |
+| [runs/.gitkeep](runs/.gitkeep) |
+| [scripts/estimate_cost.py](scripts/estimate_cost.py) |
+| [scripts/scan_publication.py](scripts/scan_publication.py) |
+| [tests/test_aci.py](tests/test_aci.py) |
+| [tests/test_loop.py](tests/test_loop.py) |

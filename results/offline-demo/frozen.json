@@ -1,0 +1,25 @@
+{
+  "development_hashes": {
+    "chunked": "eba3dff38050d1a4402257b71733516774945b0116998a206e4682a0f16a770c",
+    "merge-intervals": "3233d357d0844b5254fdb1a46d94ac28c8790aabb85e3ce82f4ce4106447b49f",
+    "normalize-method": "d786c7db188e18ea68e10035f332532ea186d5a70bce635580f74ec576673338",
+    "parse-bool": "7158034f6238cf49a60a6b0067ffa8ff06b09c8c5a24744fb5be850f69e7b7c0",
+    "unique-stable": "52e9c87506c47382be53f9002a7b141d3ae5a7e18ac301b3211edabbbc3cd05c"
+  },
+  "families": [
+    "chunked",
+    "merge-intervals",
+    "normalize-method",
+    "parse-bool",
+    "unique-stable"
+  ],
+  "instruction_hash": "f8041972e3f1cdf7bd554746ac8a543678cda5a65683af2678ec539f4b39dd26",
+  "instructions": {
+    "instructions/system.txt": "You repair one small Python function in solution.py.\nUse view to read numbered lines, edit to replace an inclusive range, test to run\nexamples, and submit when finished. Make exactly one tool call per response.\nTool observations describe the actual current state. Correct a refused edit using\nthat feedback. Tests check only examples; implement the entire issue specification.\nKeep the named function and signature. Use only Python's standard library.\nWhen a test fails, compare the expected result with the actual result.\nTrace the failing input through the current code and identify the statement\nthat explains the difference. Inspect the current code before editing.\nMake one small change, then test again. If the same failure remains, do not\nrepeat the same edit; revise your explanation of the bug.\nIf a tool reports that an action made no change, do not repeat that action unchanged. Inspect the current code and recent feedback, then choose a useful next step.\nYou cannot edit the evaluator. Submit the code, not a verbal claim of success.\nCheck every issue requirement, then submit the completed repair.\n",
+    "instructions/tools.json": "{\n  \"edit\": \"Replace an inclusive line range. Invalid Python syntax is rejected without changing the source.\",\n  \"submit\": \"Finish and submit the current source for separate evaluation.\",\n  \"test\": \"Run example checks in an isolated container. Passing examples is not final success.\",\n  \"view\": \"Show numbered lines of solution.py.\"\n}\n"
+  },
+  "mode": "scripted",
+  "solved": [
+    "not_submitted"
+  ]
+}

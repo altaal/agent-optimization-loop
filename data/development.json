@@ -1,0 +1,32 @@
+[
+  {
+    "id": "normalize-method",
+    "family": "normalize-method",
+    "issue": "Return an HTTP method as text. Decode bytes using ASCII; preserve strings exactly. Reject other types with TypeError. Non-ASCII bytes must raise UnicodeDecodeError.",
+    "source": "def normalize_method(method):\n    return str(method)\n"
+  },
+  {
+    "id": "chunked",
+    "family": "chunked",
+    "issue": "Split a list into consecutive lists of size n, including a shorter final chunk. Empty input returns []. n must be a positive integer; bool is not accepted. Raise TypeError for other n types and ValueError for non-positive n.",
+    "source": "def chunked(items, n):\n    return [items[i:i+n] for i in range(0, len(items)-n+1, n)]\n"
+  },
+  {
+    "id": "merge-intervals",
+    "family": "merge-intervals",
+    "issue": "Merge overlapping or touching closed integer intervals [start, end]. Input can be unsorted; return sorted lists, preserving every endpoint. Return [] for empty input. Raise ValueError if any start exceeds its end.",
+    "source": "def merge_intervals(intervals):\n    result = []\n    for start, end in sorted(intervals):\n        if result and start < result[-1][1]:\n            result[-1][1] = end\n        else:\n            result.append([start, end])\n    return result\n"
+  },
+  {
+    "id": "parse-bool",
+    "family": "parse-bool",
+    "issue": "Parse a string after stripping whitespace and ignoring case. True tokens: true, yes, 1. False tokens: false, no, 0. Reject any other string with ValueError and any non-string with TypeError.",
+    "source": "def parse_bool(text):\n    return bool(text)\n"
+  },
+  {
+    "id": "unique-stable",
+    "family": "unique-stable",
+    "issue": "Remove duplicate items from a list while keeping the first occurrence order. Determine duplicates using Python equality, including unhashable lists and dicts. Return a list; empty input returns [].",
+    "source": "def unique_stable(items):\n    return list(set(items))\n"
+  }
+]

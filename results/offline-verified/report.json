@@ -1,0 +1,145 @@
+{
+  "mode": "scripted",
+  "splits": {
+    "development": {
+      "per_case": [
+        {
+          "case": "chunked",
+          "before_passes": 3,
+          "after_passes": 3,
+          "attempts_per_arm": 3,
+          "difference": 0.0
+        },
+        {
+          "case": "merge-intervals",
+          "before_passes": 0,
+          "after_passes": 3,
+          "attempts_per_arm": 3,
+          "difference": 1.0
+        },
+        {
+          "case": "normalize-method",
+          "before_passes": 3,
+          "after_passes": 3,
+          "attempts_per_arm": 3,
+          "difference": 0.0
+        },
+        {
+          "case": "parse-bool",
+          "before_passes": 0,
+          "after_passes": 3,
+          "attempts_per_arm": 3,
+          "difference": 1.0
+        },
+        {
+          "case": "unique-stable",
+          "before_passes": 3,
+          "after_passes": 3,
+          "attempts_per_arm": 3,
+          "difference": 0.0
+        }
+      ],
+      "before_passes": 9,
+      "after_passes": 15,
+      "attempts_per_arm": 15,
+      "case_count": 5,
+      "family_count": 5,
+      "difference": 0.4,
+      "interval_95": [
+        0.0,
+        0.8
+      ],
+      "bootstrap_resamples": 10000,
+      "bootstrap_seed": 7331
+    },
+    "heldout": {
+      "per_case": [
+        {
+          "case": "clamp",
+          "before_passes": 2,
+          "after_passes": 2,
+          "attempts_per_arm": 3,
+          "difference": 0.0
+        },
+        {
+          "case": "count-words",
+          "before_passes": 2,
+          "after_passes": 2,
+          "attempts_per_arm": 3,
+          "difference": 0.0
+        },
+        {
+          "case": "flatten-once",
+          "before_passes": 2,
+          "after_passes": 2,
+          "attempts_per_arm": 3,
+          "difference": 0.0
+        },
+        {
+          "case": "palindrome",
+          "before_passes": 2,
+          "after_passes": 2,
+          "attempts_per_arm": 3,
+          "difference": 0.0
+        },
+        {
+          "case": "parse-pairs",
+          "before_passes": 2,
+          "after_passes": 2,
+          "attempts_per_arm": 3,
+          "difference": 0.0
+        },
+        {
+          "case": "rotate-left",
+          "before_passes": 2,
+          "after_passes": 2,
+          "attempts_per_arm": 3,
+          "difference": 0.0
+        },
+        {
+          "case": "running-total",
+          "before_passes": 2,
+          "after_passes": 2,
+          "attempts_per_arm": 3,
+          "difference": 0.0
+        },
+        {
+          "case": "safe-mean",
+          "before_passes": 2,
+          "after_passes": 2,
+          "attempts_per_arm": 3,
+          "difference": 0.0
+        },
+        {
+          "case": "strip-suffix",
+          "before_passes": 2,
+          "after_passes": 2,
+          "attempts_per_arm": 3,
+          "difference": 0.0
+        },
+        {
+          "case": "transpose",
+          "before_passes": 2,
+          "after_passes": 2,
+          "attempts_per_arm": 3,
+          "difference": 0.0
+        }
+      ],
+      "before_passes": 20,
+      "after_passes": 20,
+      "attempts_per_arm": 30,
+      "case_count": 10,
+      "family_count": 10,
+      "difference": 0.0,
+      "interval_95": [
+        0.0,
+        0.0
+      ],
+      "bootstrap_resamples": 10000,
+      "bootstrap_seed": 7331
+    }
+  },
+  "missing_attempts": 0,
+  "infrastructure_errors": 0,
+  "note": "Scripted fixture results, not measured model ability."
+}

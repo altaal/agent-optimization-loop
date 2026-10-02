@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agent-optimization-loop"
+version = "0.1.0"
+description = "A small instruction optimizer with repeated gates and separate evaluation"
+requires-python = ">=3.11"
+dependencies = []
+license = "MIT"
+
+[project.optional-dependencies]
+aci = ["aci-patch-agent @ git+https://github.com/altaal/aci-patch-agent.git@bc00468557a2af932ddc11ca2983714eb59c5845"]
+dev = ["ruff==0.14.14"]
+
+[project.scripts]
+agent-optimization-loop = "agent_optimization.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["agent_optimization*"]
+
+[tool.ruff]
+line-length = 80
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "UP", "B", "SIM", "RUF"]

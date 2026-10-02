@@ -1,0 +1,12 @@
+{
+  "repository": "https://github.com/altaal/aci-patch-agent",
+  "commit": "bc00468557a2af932ddc11ca2983714eb59c5845",
+  "sha256": {
+    "agent.py": "0662ccf21976b1b9252a5bc210a7b40dee7334f5c007654fb29d3b51a3210282",
+    "client.py": "fb9accbf5917a8d5522ba64dcc11e2ce5960f9a20c535387e41bccc85bedbccf",
+    "tools.py": "27efb7f579088feeb44511d78731d3e802cbac13b6543887003fd72ede0857e8",
+    "tasks.py": "b2586719cb3aa9b98d4d3774878143a612b0586fd364c805a792570511e01c8e",
+    "eval_tasks.py": "f7db472a8ac1ab3b1b2188a170601d5568153d61a2f7df3a2923276bb1a3c664",
+    "sandbox.py": "a9ae142e23c59dfb87c540355417e5356d4d6e345e673df86d8c097c0c06bb6a"
+  }
+}
